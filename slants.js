@@ -1,7 +1,7 @@
 
 let colourMode;
 
-//this function is called once at the start of a sketch
+//this function is called once at the start of a sketch (p5 code is referred to as a sketch)
 function setup() {
 
 
@@ -38,6 +38,7 @@ function setup() {
 //if stillColour is truthy, image will be black or white
 //but not both (ie no illusion)
 function drawCircles(stillColour){
+    ellipse(100, 100, 100, 100);
 
 }
 
@@ -53,7 +54,7 @@ function drawLines(stillColour){
 //However, as this code is used for breaking down the illusion, the noLoop() is commented out
 //so that the illusion can be redrawn correctly after user input interaction
 function draw() {
-    background(150)
+    background(150) // grey background colour - 255 would be white
     c = int(colourMode.value());
     drawCircles(c);
     drawLines(c);
